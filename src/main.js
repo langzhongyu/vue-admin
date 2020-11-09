@@ -21,4 +21,4 @@ new Vue({
   el: '#app',
   router,
   render: h => h(App)//渲染视图，挂载el, vue2.0写法
-})
+}).$mount('#app')

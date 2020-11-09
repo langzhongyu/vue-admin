@@ -33,8 +33,8 @@
     data() {
       return {
         user: {
-          mobile: '', // 手机号
-          code: '', // 验证码
+          mobile: '13911111111', // 手机号
+          code: '246810', // 验证码
           agree:false
         },
         checked: false, // 是否同意协议的选中状态
@@ -85,6 +85,9 @@
             type: 'success'
           });
           this.login_status=false;
+
+		    //降接口返回数据存储在本地
+        window.localStorage.setItem('user',JSON.stringify(res.data.data));
           //跳转到首页
           this.$router.push({
             name:'home'

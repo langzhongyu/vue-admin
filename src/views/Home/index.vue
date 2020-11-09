@@ -1,5 +1,7 @@
 <template>
-  <div class="home-container">首页</div>
+  <div class="home-container">
+    首页
+  </div>
 </template>
 
 <script>
@@ -14,5 +16,5 @@ export default{
 </script>
 
 <style scoped>
-  
+.home-container{padding:0;}
 </style>
