@@ -36,6 +36,7 @@
 <script>
   import asideIndex from './components/aside'
   import {getUserProfile} from '@/api/user.js'
+  import globalBus from '@/utils/global-bus'
   export default{
     name:'layout',
     data(){
@@ -47,6 +48,11 @@
     created(){
       //组件初始化，请求获取用户资料
       this.loadUserProfile()
+      //注册通信事件
+      globalBus.$on('update-user',(data)=>{
+          this.user.name=data.name;
+          this.user.photo=data.photo;
+      })
     },
     methods:{
       //除了登录接口，其他所有接口都需要授权才能使用（需提供身份令牌token才能获取数据）
