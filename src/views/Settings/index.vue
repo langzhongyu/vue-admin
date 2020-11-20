@@ -110,7 +110,7 @@
           this.updateLoading=false;
           //发布通信，用户信息已修改
           globalBus.$emit('update-user', this.user)
-          console.log(JSON.stringify(res))
+          //console.log(JSON.stringify(res))
         }).catch(()=>{
           this.$message({
             type:'info',
